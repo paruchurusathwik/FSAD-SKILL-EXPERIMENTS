@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- Create Bean for Employee1 class -->
+<bean id="emp1Bean" class="DemoOnSpring.DemoOnSpringS7.Employee1">
+<property name="empID" value="1" />
+<property name="empName" value="Sathwik" />
+<property name="empSalary" value="100000" />
+<property name="empActive" value="true" />
+<!-- Injecting List Values -->
+<property name="empSkills" >
+<list>
+<value>Java</value>
+<value>Hibernate</value>
+<value>Spring</value>
+</list>
+</property>
+</bean>
+
+<bean id="emp2Bean" class="DemoOnSpring.DemoOnSpringS7.Employee1">
+<property name="empID" value="2" />
+<property name="empName" value="Venkat" />
+<property name="empSalary" value="900000" />
+<property name="empActive" value="true" />
+<!-- Injecting List Values -->
+<property name="empSkills" >
+<list>
+<value>Java</value>
+<value>AIML</value>
+<value>Full Stack</value>
+</list>
+</property>
+</bean>
+
+
+</beans>
