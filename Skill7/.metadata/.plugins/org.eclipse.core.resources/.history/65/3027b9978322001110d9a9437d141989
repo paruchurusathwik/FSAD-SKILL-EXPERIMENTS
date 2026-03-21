@@ -1,0 +1,21 @@
+package JavaMailApp;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/mail")
+
+public class MailController {
+	
+	@Autowired
+	MailService service;
+	//Aimple EMail API
+	@GetMapping("/send")
+	public void sendSimpleMail(@RequestParam String to, @RequestParam String subject, @RequestParam String text) {
+		 service.sendMail(to, subject, text);
+	}
+}

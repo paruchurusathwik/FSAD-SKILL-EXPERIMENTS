@@ -1,0 +1,5 @@
+package JavaMailApp;
+
+public class MailController {
+
+}
